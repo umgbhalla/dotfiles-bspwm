@@ -1,0 +1,2 @@
+#!/bin/sh
+man -k . | awk '{print $1}' | rofi -dmenu -i -p "list" | xargs -r alacritty -e man
