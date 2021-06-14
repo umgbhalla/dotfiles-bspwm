@@ -86,7 +86,9 @@
 
 <hr>
 this how u generate a table for sxhkdrc , i dont know how to add \| in middle 😵
-<br>
+<br>  
+  
+
    ```bash
 		$ awk '/^[a-z]/ && last {print "|" $0,"\t",last,"|"} {last=""} /^#/{last=$0}' ~/.config/sxhkd/sxhkdrc |  column -t -s $'\t'
    ```
