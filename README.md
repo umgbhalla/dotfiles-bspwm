@@ -117,12 +117,14 @@
    ![img](./etc/ss-1.png)
 
 <br/>
+<hr>
+<hr>
 <code>
-<hr>
-<hr>
 configs and scripts shared from https://github.com/TheRealKizu and https://github.com/siduck76
-<hr>
-fork of https://github.com/TheRealKizu/dotfiles and https://github.com/umgbhalla/dotfiles_meowV2 [i dont remember why i named it so....] 
-<hr>
-<hr>
 <code/>
+<hr>
+<code>
+fork of https://github.com/TheRealKizu/dotfiles and https://github.com/umgbhalla/dotfiles_meowV2 [i dont remember why i named it so....] 
+<code/>
+<hr>
+<hr>
