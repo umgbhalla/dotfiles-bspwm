@@ -130,7 +130,7 @@ this how u generate a table for sxhkdrc , i dont know how to add | in middle ðŸ˜
    ![img](./etc/ss-1.png)
 
 <br/>
-<hr>
+
 <hr>
 
 configs and scripts shared from https://github.com/TheRealKizu and https://github.com/siduck76
@@ -139,5 +139,4 @@ configs and scripts shared from https://github.com/TheRealKizu and https://githu
 
 fork of https://github.com/TheRealKizu/dotfiles and https://github.com/umgbhalla/dotfiles_meowV2 [i dont remember why i named it so....] 
 
-<hr>
 <hr>
