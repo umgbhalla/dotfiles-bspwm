@@ -45,13 +45,13 @@ sudo light -S 25 &
 
 bspc monitor -d I II III IV V VI VII 
 
-bspc config border_width         5
-bspc config window_gap           0
+bspc config border_width         0
+bspc config window_gap           4
 # bspc config top_padding          36
 
 # Border
-# bspc config focused_border_color        "#e96861" 
-bspc config focused_border_color        "#230B52"
+bspc config focused_border_color        "#7373ff" 
+# bspc config focused_border_color        "#ff3465" 
 # bspc config focused_border_color        "#ffffff" 
 # bspc config focused_border_color        "#504945"
 bspc config normal_border_color         "#1e0f2c"
@@ -71,6 +71,16 @@ bspc config pointer_action2 resize_corner
 
 
 
+# Calculate the center of the screen for a 600x400 scratchpad
+scratchpad_xy="600x400"
+display_xy=$(xdpyinfo | grep -i dimensions | awk '{ print $2 }')
+half_display=$(echo $display_xy | tr 'x' ' ' | cut -f1 -d' ' | xargs -I _ echo _/2 | bc)
+half_scratchpad=$(echo $scratchpad_xy | tr 'x' ' ' | cut -f1 -d' ' | xargs -I _ echo _/2 | bc)
+offset=$(echo ${half_display}-${half_scratchpad} | bc)
+
+# rectangle=WidthxHeight+Xoffset+Yoffset
+bspc rule -a scratchy sticky=on state=floating rectangle=${scratchpad_xy}+${offset}+0
+	
 
 bspc rule -a Code desktop='^1'
 bspc rule -a Spotify desktop='^7'
@@ -81,7 +91,7 @@ bspc rule -a Ferdi desktop='^6'
 bspc rule -a mplayer2 state=floating
 # bspc rule -a Alacritty state=pseudo_tiled
 bspc rule -a galculator state=floating
-bspc rule -a kitty state=floating
+# bspc rule -a kitty state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a Yad state=floating
 bspc rule -a Kupfer.py focus=on

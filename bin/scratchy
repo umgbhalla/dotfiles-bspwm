@@ -1,0 +1,13 @@
+#!/bin/bash
+
+id=$(xdotool search --class scratchy);
+if [ -z "$id" ]; then
+	kitty --class scratchy;
+else
+	if [ ! -f /tmp/hide_scratch ]; then
+		touch /tmp/hide_scratch && xdo hide "$id"
+	elif [ -f /tmp/hide_scratch ]; then
+		rm /tmp/hide_scratch && xdo show "$id"
+	fi
+fi
+	

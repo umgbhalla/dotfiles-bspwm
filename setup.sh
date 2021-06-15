@@ -14,10 +14,10 @@ downloadDependencies() {
 
 		if [[ -e /usr/bin/paru ]]; then
 			echo -e "[*] paru detected. Installing dependencies..."
-			paru -S bspwm sxhkd thunar firefox dmenu clipmenu light flameshot rofi rofimoji polybar neovim-nightly-bin alacritty picom-ibhagwan-git brightnessctl playerctl dunst hsetroot maim viewnior jq xclip bsp-layout noto-fonts-emoji ttf-hack
+			paru -S bspwm sxhkd thunar firefox dmenu clipmenu light kitty flameshot rofi rofimoji polybar neovim-nightly-bin alacritty picom-ibhagwan-git brightnessctl playerctl dunst hsetroot maim viewnior jq xclip bsp-layout noto-fonts-emoji ttf-hack
 		elif [[ -e /usr/bin/yay ]]; then
 			echo -e "[*] yay detected. Installing dependencies..."
-			yay -S bspwm sxhkd thunar firefox dmenu clipmenu light flameshot rofi rofimoji polybar neovim-nightly-bin alacritty picom-ibhagwan-git brightnessctl playerctl dunst hsetroot maim viewnior jq xclip bsp-layout noto-fonts-emoji ttf-hack	
+			yay -S bspwm sxhkd thunar firefox dmenu clipmenu light kitty flameshot rofi rofimoji polybar neovim-nightly-bin alacritty picom-ibhagwan-git brightnessctl playerctl dunst hsetroot maim viewnior jq xclip bsp-layout noto-fonts-emoji ttf-hack 
 			# Line from https://github.com/Axarva/dotfiles-2.0/blob/9f0a71d7b23e1213383885f2ec641da48eb01681/install-on-arch.sh#L67
 			read -r -p "Would you like to install yay? [Y/n]: " yay
 			sleep 1.5
@@ -28,7 +28,7 @@ downloadDependencies() {
 					(cd $HOME/.setup-scripto && makepkg -si)
 
 					echo "[*] yay installed. Installing dependencies..."
-					yay -S bspwm sxhkd thunar firefox dmenu clipmenu light flameshot rofi rofimoji polybar neovim-nightly-bin alacritty picom-ibhagwan-git brightnessctl playerctl dunst hsetroot maim viewnior jq xclip bsp-layout noto-fonts-emoji ttf-hack						;;
+					yay -S bspwm sxhkd thunar firefox dmenu clipmenu light kitty flameshot rofi rofimoji polybar neovim-nightly-bin alacritty picom-ibhagwan-git brightnessctl playerctl dunst hsetroot maim viewnior jq xclip bsp-layout noto-fonts-emoji ttf-hack
 				[nN])
 					echo "[*] Okay. Will not install yay."
 					;;
