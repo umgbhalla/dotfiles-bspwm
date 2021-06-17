@@ -1,2 +1,2 @@
 #!/bin/sh
-man -k . | awk '{print $1}' | rofi -dmenu -i -p "list" | xargs -r alacritty -e man
+man -k . | awk '{print $2 "  " $1}' | rofi -dmenu -i -p "list" |  sed -E 's/^\((.+)\)/\1/' | xargs -r alacritty -e man
