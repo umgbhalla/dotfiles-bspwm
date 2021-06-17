@@ -57,7 +57,6 @@ alias s='surf'
 alias sf='surf fast.com'
 alias sc='tty-clock -SscC0'
 alias serv='sudo service --status-all | bat'
-alias spr="curl -F 'sprunge=<-' http://sprunge.us"
 alias srt=' du -sh ./* | sort -n | bat'
 alias ssy='sudo apt update && sudo apt upgrade'
 alias ttystat='echo $(tty) $TERM ${COLUMNS}x$LINES'

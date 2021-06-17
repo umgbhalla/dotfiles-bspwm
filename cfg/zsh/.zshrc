@@ -65,6 +65,22 @@ open_with_fzf() {
 cd_with_fzf() {
     cd $HOME && cd "$(fd -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
 }
+x0 () {
+    cat "$@" \
+        | command curl -fsLF "file=@-" "https://0x0.st" \
+        | tr -d "\n" \
+        | xclip -in -sel clip && \
+        notify-send -t 900 -u low "File link copied to clipboard!"
+}
+
+spr (){
+	cat "$@" \
+	| command curl -fsLF 'sprunge=<-' http://sprunge.us \
+	| tr -d "\n" \
+	| xclip -in -sel clip && \
+	notify-send -t 900 -u low "Sprung copied to clipboard!"
+	
+}
 
 alias cz='cd_with_fzf'
 alias oz='open_with_fzf'

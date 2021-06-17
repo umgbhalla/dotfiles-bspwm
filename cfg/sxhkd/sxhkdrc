@@ -58,12 +58,13 @@ alt + e
 
 # scratchpad without tmux seesion
 super + apostrophe
-	tdrop -ma -w 50% -h 80% -x 48%  -y 15% -n 2 alacritty
+	tdrop -ma -w 1378 -h 978 -x 30%  -y 5% -n 2 alacritty
 	# tdrop -ma -w 50% -h 80% -x 48%  -y 15% -s blob alacritty
 
 # scratchpad with tmux session
 super + semicolon
-	tdrop -ma -w 98% -h 50% -x 1% -y 44 -s dropdown alacritty
+	tdrop -ma -w 40% -h 978 -x 1%  -y 5% -n 1 alacritty
+	# tdrop -ma -w 98% -h 50% -x 1% -y 44 -s dropdown alacritty
 
 # man search
 alt + m

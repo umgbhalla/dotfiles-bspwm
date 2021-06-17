@@ -45,8 +45,8 @@ sudo light -S 25 &
 
 bspc monitor -d I II III IV V VI VII 
 
-bspc config border_width         3
-bspc config window_gap           3
+bspc config border_width         4
+bspc config window_gap           4
 # bspc config top_padding          36
 
 # Border
