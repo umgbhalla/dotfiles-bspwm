@@ -4,6 +4,6 @@ awk '/^[a-z]/ && last {print "<small>",$0,"\t",last,"</small>"} {last=""} /^#/{l
     column -t -s $'\t' |
     rofi -dmenu -i -p "keybindings:" -markup-rows \
 	-no-show-icons \
-	-width 27 \
-	-lines 8 \
+	-width 26 \
+	-lines 14 \
 	-padding 20

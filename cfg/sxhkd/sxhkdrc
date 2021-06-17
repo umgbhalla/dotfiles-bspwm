@@ -35,9 +35,9 @@ super + a
 super + b
 	alacritty -e bpytop
 
-# ranger
-super + r
-	alacritty -e ranger
+# # ranger
+# super + r
+# 	alacritty -e ranger
 
 
 # program launcher
@@ -52,6 +52,19 @@ alt + Return
 alt + e
     rofimoji
 
+# scratchpad
+# alt + semicolon
+# 	scratchy
+
+# scratchpad without tmux seesion
+super + apostrophe
+	tdrop -ma -w 50% -h 80% -x 48%  -y 15% -n 2 alacritty
+	# tdrop -ma -w 50% -h 80% -x 48%  -y 15% -s blob alacritty
+
+# scratchpad with tmux session
+super + semicolon
+	tdrop -ma -w 98% -h 50% -x 1% -y 44 -s dropdown alacritty
+
 # man search
 alt + m
     sh $HOME/.local/bin/searchman
@@ -62,7 +75,7 @@ alt + r
 
 # clipmenu
 alt + v
-    CM_LAUNCHER=rofi clipmenu
+    CM_LAUNCHER=rofi clipmenu 
 
 # keybindhelper
 alt + h
@@ -90,14 +103,14 @@ super + period
 super + shift + d
     rofi -modi drun -show ssh -line-padding 4 \
                 -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+                -show-icons 
 
 # power-menu 
 super + p
      ~/.config/rofi/powermenu.sh
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + shift + r
     pkill -USR1 -x sxhkd
 
 
@@ -251,6 +264,10 @@ XF86MonBrightnessDown
 
 
 # Screenshot
+shift + Print
+	scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'
+
+# Flameshot
 Print
 	/usr/bin/flameshot gui
 

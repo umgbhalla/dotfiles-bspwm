@@ -29,14 +29,14 @@ export CM_LAUNCHER=rofi
 
 export FZF_DEFAULT_OPS="--extended"
 
-
-
 export PATH='/home/umang/.scripts/':$PATH 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 
-ZSH_THEME="wedisagree"
+# ZSH_THEME="af-magic"
+ZSH_THEME="awesomepanda"
+# ZSH_THEME="wedisagree"
 # ZSH_THEME="theunraveler"
 # ZSH_THEME="dstufft"
 # ZSH_THEME="refined"
@@ -56,6 +56,7 @@ plugins=(fzf zsh-autosuggestions zsh-syntax-highlighting web-search )
 
 ### "bat" as manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="nvim -c 'set ft=man' -"
 
 
 open_with_fzf() {
@@ -93,8 +94,6 @@ export NVM_DIR="$HOME/.nvm"
 #bat ~/.todo
 colorscript -e 32
 
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh//.p10k.zsh.
-[[ ! -f ~/.config/zsh//.p10k.zsh ]] || source ~/.config/zsh//.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+# [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

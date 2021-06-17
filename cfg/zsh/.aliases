@@ -7,7 +7,8 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias .f='cd /mnt/F'
-alias .d='cd ~/dotfiles_meow'
+alias .b='cd ~/.local/bin'
+alias .d='cd ~/hub/dotfiles-bspwm'
 alias .dd='cd ~/Downloads'
 alias .u='cd /mnt/F/umgbhalla.github.io'
 alias .dev='cd /mnt/F/dev'
@@ -27,6 +28,7 @@ alias c='clipmenu'
 alias color="colorscript -e 32"
 alias covid='curl https://corona-stats.online\?minimal\=true | bat'
 alias ct='cht.sh' #curl cht.sh/:learn
+alias dh='dirs -v'
 alias f='tuxi -u'
 alias d='devour'
 alias gad='git add .'
@@ -38,6 +40,7 @@ alias gs='git status'
 alias gst='git status'
 alias ixi="curl -F 'f:1=<-' ix.io"
 alias lol=" figlet -c -f ~/.local/share/fonts/figlet-fonts/3d.flf "
+alias lswifi="nmcli conn show"
 alias m='micro'
 alias mpp='mpv --no-video'
 alias mu='youtube-dl -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3'
@@ -77,15 +80,15 @@ alias ns='nvim ~/.config/sxhkd/sxhkdrc'
 alias nz='nvim ~/.config/zsh/.zshrc'
 
 # Changing "ls" to "exa"
-alias ld='(exa -ahl --color=always --group-directories-first) | bat ' # my preferred listing
+alias la='(exa -ahl --color=always --group-directories-first) | bat ' # my preferred listing
 alias lr='(exa -aR --color=always --group-directories-first) |bat '  # all files and dirs
 alias l='(exa -a --color=always --group-directories-first) |bat '  # all files and dirs
-alias la='(exa -l --color=always --group-directories-first) | bat'  # long format
+alias ld='(exa -l --color=always --group-directories-first) | bat'  # long format
 alias lt='(exa -aT --color=always --group-directories-first)| bat' # tree listing
 alias l.='exa -a | egrep "^\." | bat'
 alias g="google"
-
-alias ls='exa --color=always --group-directories-first'
+alias ls='exa --icons -sold --grid --group-directories-first'
+# alias ls='exa --color=always --group-directories-first'
 
 # alias ls="ptls "
 alias pwd="ptpwd"
