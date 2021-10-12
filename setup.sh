@@ -29,7 +29,7 @@ downloadDependencies() {
 
 					echo "[*] yay installed. Installing dependencies..."
 					yay -S bspwm sxhkd thunar firefox dmenu clipmenu light kitty flameshot rofi rofimoji polybar neovim-nightly-bin alacritty picom-ibhagwan-git brightnessctl playerctl dunst hsetroot maim viewnior jq xclip bsp-layout noto-fonts-emoji ttf-hack
-				[nN])
+				[nN]
 					echo "[*] Okay. Will not install yay."
 					;;
 			esac 
