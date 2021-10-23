@@ -91,13 +91,27 @@
 
 
 <hr>
-this how u generate a table for sxhkdrc , i dont know how to add | in middle 😵
+to generate this use script below 
+
+```
+#!/usr/bin/env bash
+# Markdown sxhkd configuration for cheatsheet/documents.
+
+SXHKD_CONF="$HOME/.config/sxhkd/sxhkdrc"
+MD_NAME="Binding"
+MD_VALUE="Functionality"
+
+(
+echo -e "|$MD_NAME\t # $MD_VALUE |";
+echo -e "|--- | --- |";
+awk '/^[a-z]/ && last {print "|" $0,"\t",last,"|"} {last=""} /^#/{last=$0}' "$SXHKD_CONF"
+) | sed -e 's/# /| /' -e 's/^|/| /' | column -t -s $'\t'
+
+```
+script provided by <a href="https://github.com/MahdyMirzade">@MahdyMirzade</a>
+
 <br>  
   
-
-   ```bash
- awk '/^[a-z]/ && last {print "|" $0,"\t",last,"|"} {last=""} /^#/{last=$0}' ~/.config/sxhkd/sxhkdrc |  column -t -s $'\t'
-   ```
 
 ### ❖ Dependencies
 
